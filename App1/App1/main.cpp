@@ -11,6 +11,9 @@ int main()
 	printf("hello\n");
 	printf("hello\n");
 
+	printf("hi\n");
+	printf("hello\n");
+
 
 	return 0;
 
