@@ -1,20 +1,39 @@
-#include <stdio.h>
+#include <iostream>
+#include <string>
+using namespace std;
+
+template <typename T1, typename T2>
+class cal
+{
+public:
+	bool operator+(cal<double, long> &x)
+	{
+		return x.first + x.second;
+	}
+
+	void sum(T1 x, T2 y)
+	{
+		cout << (x + y) << endl;
+	}
+
+	void dif(T1 x, T2 y)
+	{
+		cout << (x - y) << endl;
+	}
+
+};
 
 int main()
 {
-	printf("hello\n");
-	printf("hello\n");
-	printf("hello\n");
+	cal<int, int> data;
+	data.sum(1, 2);
+	data.sum('a', 'b');
 
-	printf("hello\n");
-	printf("hello\n");
-	printf("hello\n");
-	printf("hello\n");
+	cal<double, long> data2;
+	data2.sum(1.2, 2);
 
-	printf("hi\n");
-	printf("hello\n");
+	cal<double, double> data3;
+	data3.dif(1.2, 1.5);
 
-
-	return 0;
-
+	system("pause");
 }
